@@ -19,7 +19,7 @@ const MoneyQuestSection = () => {
                                 Money Quest is a product of Nurture Haven that makes financial learning easy and exciting. Through fun quests and daily challenges, you'll learn how to save, invest, and grow wealth confidently.
                             </p>
 
-                            <button className="px-8 py-4 bg-[#22C55E] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105">
+                            <button className="px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
                                 Join the Waitlist
                             </button>
                         </div>
@@ -65,7 +65,7 @@ const MoneyQuestSection = () => {
                             Money Quest is a product of Nurture Haven that makes financial learning easy and exciting. Through fun quests and daily challenges, you'll learn how to save, invest, and grow wealth confidently.
                         </p>
 
-                        <button className="px-8 py-4 bg-[#22C55E] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105">
+                        <button className="px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
                             Join the Waitlist
                         </button>
                     </div>

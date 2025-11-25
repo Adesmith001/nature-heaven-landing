@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import MoneyQuestSection from './components/MoneyQuestSection';
+import AvatarsSection from './components/AvatarsSection';
+import Footer from './components/Footer';
 import './index.css';
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       <Header />
       <HeroSection />
       <MoneyQuestSection />
+      <AvatarsSection />
+      <Footer />
     </div>
   );
 }

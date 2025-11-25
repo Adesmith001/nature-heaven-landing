@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react";
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import MoneyQuestSection from './components/MoneyQuestSection';
@@ -14,6 +15,7 @@ function App() {
       <MoneyQuestSection />
       <AvatarsSection />
       <Footer />
+      <Analytics />
     </div>
   );
 }

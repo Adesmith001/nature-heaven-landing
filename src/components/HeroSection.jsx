@@ -93,16 +93,16 @@ const HeroSection = () => {
 
                     {/* Image Grid - Stacked */}
                     <div className="grid grid-rows-1 md:grid-cols-2 gap-6">
-                        <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+                        <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden">
                             <img src="/hero-section1.png" alt="Family" className="w-full h-full object-cover" />
                         </div>
-                        <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+                        <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden">
                             <img src="/hero-section2.png" alt="Child" className="w-full h-full object-cover" />
                         </div>
-                        <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+                        <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden">
                             <img src="/hero-section3.png" alt="Elderly" className="w-full h-full object-cover" />
                         </div>
-                        <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+                        <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden">
                             <img src="/hero-section4.png" alt="Teen" className="w-full h-full object-cover" />
                         </div>
                     </div>

@@ -4,7 +4,7 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#FCF5EB] backdrop-blur-sm">
+        <header className="fixed top-0 left-0 right-0 z-99 bg-[#FCF5EB] backdrop-blur-sm">
             <div className="relative w-full max-w-[90%] sm:max-w-[85%] md:max-w-6xl lg:max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-4 z-10">
                 <div className="flex items-center justify-between">
                     {/* Logo */}

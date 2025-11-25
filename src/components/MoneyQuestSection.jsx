@@ -31,7 +31,7 @@ const MoneyQuestSection = () => {
                         <div className="relative h-[700px] bottom-0">
                             <div className="relative w-full h-full">
                                 {/* Phone 1 - Left/Front */}
-                                <div className="absolute left-0 bottom-0 w-[45%] z-10">
+                                <div className="absolute left-0 bottom-0 w-[50%] z-99">
                                     <img
                                         src="/phone1.png"
                                         alt="Money Quest App - Edit Profile"
@@ -40,7 +40,7 @@ const MoneyQuestSection = () => {
                                 </div>
 
                                 {/* Phone 2 - Right/Back */}
-                                <div className="absolute right-0 bottom-0 w-[50%] z-20">
+                                <div className="absolute right-0 bottom-0 w-[55%] z-20">
                                     <img
                                         src="/phone2.png"
                                         alt="Money Quest App - Welcome Screen"

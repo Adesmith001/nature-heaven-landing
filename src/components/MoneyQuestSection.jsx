@@ -2,7 +2,7 @@ import React from 'react';
 
 const MoneyQuestSection = () => {
     return (
-        <section className="relative bg-[#D4ED6D] overflow-hidden">
+        <section id="about" className="relative bg-[#D4ED6D] overflow-hidden">
             {/* Desktop Layout */}
             <div className="hidden lg:block">
                 <div className="max-w-7xl mx-auto px-6">
@@ -19,9 +19,12 @@ const MoneyQuestSection = () => {
                                 Money Quest is a product of Nurture Haven that makes financial learning easy and exciting. Through fun quests and daily challenges, you'll learn how to save, invest, and grow wealth confidently.
                             </p>
 
-                            <button className="px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
+                            <a
+                                href="#footer"
+                                className="inline-block px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
+                            >
                                 Join the Waitlist
-                            </button>
+                            </a>
                         </div>
 
                         {/* Right Content - Phone Mockups */}
@@ -65,9 +68,12 @@ const MoneyQuestSection = () => {
                             Money Quest is a product of Nurture Haven that makes financial learning easy and exciting. Through fun quests and daily challenges, you'll learn how to save, invest, and grow wealth confidently.
                         </p>
 
-                        <button className="px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
+                        <a
+                            href="#footer"
+                            className="inline-block px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
+                        >
                             Join the Waitlist
-                        </button>
+                        </a>
                     </div>
 
                     {/* Phone Images - Stacked and touching bottom */}

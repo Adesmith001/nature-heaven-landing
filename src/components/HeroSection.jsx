@@ -88,6 +88,21 @@ const HeroSection = () => {
                             neurotypical children, teenagers and young adults with the tools and insights
                             to take control of their financial journey.
                         </p>
+
+                        {/* <div className="flex flex-wrap gap-4">
+                            <a
+                                href="#footer"
+                                className="px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
+                            >
+                                Join the Waitlist
+                            </a>
+                            <a
+                                href="#about"
+                                className="px-8 py-4 bg-white text-[#052F1B] border-2 border-[#052F1B] rounded-xl font-semibold hover:bg-[#F5EDE4] transition-all duration-300"
+                            >
+                                Learn More
+                            </a>
+                        </div> */}
                     </div>
 
                     {/* Right Content - Image Collage (Desktop) */}

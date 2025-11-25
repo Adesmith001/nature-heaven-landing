@@ -21,9 +21,12 @@ const AvatarsSection = () => {
                     <p className="text-lg md:text-xl text-[#052F1B] max-w-3xl mx-auto leading-relaxed">
                         Money Quest is a product of Nurture haven that makes financial learning easy and exciting. Through fun quests and daily challenges, you'll learn how to save, invest, and grow wealth confidently.
                     </p>
-                    <button className="mt-8 px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
+                    <a
+                        href="#footer"
+                        className="inline-block mt-8 px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
+                    >
                         Join the Waitlist
-                    </button>
+                    </a>
                 </div>
 
                 {/* Avatars Grid - Desktop */}

@@ -1,8 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Footer = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: ''
+    });
+    const [status, setStatus] = useState('');
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('sending');
+
+        // REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT URL
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzxJLerJdWnB3w_gPrgfqf7-OiNx3BxgHJAcfZoy6EiPIMYjD54TbWIT4JWLZVxMHCp/exec';
+
+        try {
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Important for Google Apps Script
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            setStatus('success');
+            setFormData({ name: '', email: '' });
+            alert('Thank you for joining the waitlist!');
+        } catch (error) {
+            console.error('Error:', error);
+            setStatus('error');
+            alert('Something went wrong. Please try again.');
+        }
+    };
+
     return (
-        <footer className="relative">
+        <footer id="footer" className="relative">
             {/* Main Footer Section */}
             <div className="bg-[#FCF5EB] py-12 px-6">
                 <div className="max-w-7xl mx-auto">
@@ -24,7 +64,7 @@ const Footer = () => {
                             <div className="flex gap-3">
                                 {/* Instagram */}
                                 <a
-                                    href="#"
+                                    href="https://www.instagram.com/nurture_haven/"
                                     className="w-10 h-10 bg-[#26D367] rounded-full flex items-center justify-center hover:bg-[#16A34A] transition-colors duration-300"
                                     aria-label="Instagram"
                                 >
@@ -39,7 +79,7 @@ const Footer = () => {
 
                                 {/* Twitter/X */}
                                 <a
-                                    href="#"
+                                    href="https://x.com/nurture_haven"
                                     className="w-10 h-10 bg-[#26D367] rounded-full flex items-center justify-center hover:bg-[#16A34A] transition-colors duration-300"
                                     aria-label="Twitter"
                                 >
@@ -62,33 +102,54 @@ const Footer = () => {
                             <p className="text-[#052F1B] text-sm leading-relaxed">
                                 Subscribe to our MailChimp newsletter and stay up to date with all events coming straight in your mailbox.
                             </p>
-                            <div className="relative">
+                            <form onSubmit={handleSubmit} className="space-y-3">
                                 <input
-                                    type="email"
-                                    placeholder="Your email address"
+                                    type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    placeholder="Your Name"
+                                    required
                                     className="w-full px-4 py-3 bg-[#26D36799] rounded-full text-[#052F1B] placeholder-[#052F1B]/60 focus:outline-none focus:ring-2 focus:ring-[#26D367]"
                                 />
-                                <button
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300"
-                                    aria-label="Subscribe"
-                                >
-                                    <svg
-                                        className="w-4 h-4 text-[#052F1B]"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
+                                <div className="relative">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        placeholder="Your email address"
+                                        required
+                                        className="w-full px-4 py-3 bg-[#26D36799] rounded-full text-[#052F1B] placeholder-[#052F1B]/60 focus:outline-none focus:ring-2 focus:ring-[#26D367]"
+                                    />
+                                    <button
+                                        type="submit"
+                                        disabled={status === 'sending'}
+                                        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors duration-300 disabled:opacity-50"
+                                        aria-label="Subscribe"
                                     >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
-                                </button>
-                            </div>
+                                        {status === 'sending' ? (
+                                            <div className="w-4 h-4 border-2 border-[#052F1B] border-t-transparent rounded-full animate-spin"></div>
+                                        ) : (
+                                            <svg
+                                                className="w-4 h-4 text-[#052F1B]"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg>
+                                        )}
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Copyright Bar */}
-            <div className="bg-[#26D367] py-4 px-6">
+            <div className="bg-[#26D367] py-6 px-6">
                 <div className="max-w-7xl mx-auto text-center">
                     <p className="text-white text-sm">
                         © 2025 Nurture Haven. All rights reserved.

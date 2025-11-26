@@ -15,7 +15,7 @@ const Header = () => {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8">
                         <a
-                            href="#about"
+                            href="#footer"
                             className="px-6 py-2.5 bg-[#052F1B] text-white rounded-lg font-medium hover:bg-[#16A34A] transition-all duration-300 hover:shadow-lg hover:shadow-[#22C55E]/20"
                         >
                             About Us
@@ -57,7 +57,7 @@ const Header = () => {
                             Home
                         </a>
                         <a
-                            href="#about"
+                            href="#footer"
                             className="px-6 py-2.5 bg-[#0F3D2C] text-white rounded-lg font-medium hover:bg-[#16A34A] transition-all duration-300 text-center"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >

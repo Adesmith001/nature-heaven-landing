@@ -113,7 +113,7 @@ const HeroSection = () => {
                 <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 3xl:gap-20 items-start">
                     {/* Left Content */}
                     <div className="space-y-5 lg:space-y-6 xl:space-y-7 2xl:space-y-8 3xl:space-y-10 -mt-5">
-                        <h1 className="text-[120px] font-bold text-[#052F1B] leading-none">
+                        <h1 className="text-[110px] font-bold text-[#052F1B] leading-none">
                             Learn. Grow.
                             <br />
                             Thrive

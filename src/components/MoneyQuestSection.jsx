@@ -55,9 +55,9 @@ const MoneyQuestSection = () => {
 
             {/* Mobile Layout */}
             <div className="lg:hidden">
-                <div className="px-6 text-center">
+                <div className="px-6 text-left">
                     {/* Content */}
-                    <div className="space-y-6 mb-12 pt-10">
+                    <div className="space-y-6 mb-12 pt-12">
                         <h2 className="text-[120px] font-bold text-[#052F1B]">
                             Money
                             <br />

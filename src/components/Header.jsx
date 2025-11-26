@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-2">
-                        <img src="/hero-section-logo.png" alt="Nature Haven Logo" className="w-36 h-16" />
+                        <img src="/hero-section-logo.png" alt="Nature Haven Logo" className="w-32 h-12" />
                     </div>
 
                     {/* Desktop Navigation */}

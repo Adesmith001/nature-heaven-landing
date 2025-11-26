@@ -52,7 +52,7 @@ const Footer = () => {
                             <img
                                 src="/hero-section-logo.png"
                                 alt="Nurture Haven Logo"
-                                className="h-16 w-auto"
+                                className="h-12 w-32"
                             />
                         </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen bg-[#FCF5EB] overflow-hidden xl:pt-10 2xl:pt-20 flex items-center">
+        <section className="relative min-h-screen bg-[#FCF5EB] overflow-hidden pt-17 xl:pt-10 2xl:pt-20 flex items-center">
             {/* Grid Background Pattern */}
             <div className="absolute inset-0 z-0 opacity-30">
                 <div className="h-full w-full" style={{

@@ -5,7 +5,7 @@ const MoneyQuestSection = () => {
         <section id="about" className="relative bg-[#D4ED6D] overflow-hidden">
             {/* Desktop Layout */}
             <div className="hidden lg:block">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
                     <div className="grid lg:grid-cols-2 gap-12 items-start">
                         {/* Left Content */}
                         <div className="space-y-6 pt-12">
@@ -77,7 +77,7 @@ const MoneyQuestSection = () => {
                     </div>
 
                     {/* Phone Images - Stacked and touching bottom */}
-                    <div className="relative h-[500px] max-w-md mx-auto">
+                    <div className="relative h-[600px] max-w-md mx-auto">
                         {/* Phone 1 - Left/Front */}
                         <div className="absolute left-0 bottom-0 w-[48%] z-10">
                             <img

@@ -72,7 +72,7 @@ const HeroSection = () => {
             </div>
 
             {/* Main Content */}
-            <div className="relative w-full max-w-[90%] sm:max-w-[85%] md:max-w-6xl lg:max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] 3xl:max-w-[1800px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-10 2xl:py-24 xz-10">
+            <div className="relative w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-10 2xl:py-24 z-10">
                 {/* Mobile/Tablet Layout */}
                 <div className="lg:hidden">
                     {/* Text Content - Top */}
@@ -110,10 +110,10 @@ const HeroSection = () => {
                 </div>
 
                 {/* Desktop Layout */}
-                <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 3xl:gap-20 items-center">
+                <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 3xl:gap-20 items-start">
                     {/* Left Content */}
-                    <div className="space-y-5 lg:space-y-6 xl:space-y-7 2xl:space-y-8 3xl:space-y-10">
-                        <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold text-[#052F1B] leading-tight">
+                    <div className="space-y-5 lg:space-y-6 xl:space-y-7 2xl:space-y-8 3xl:space-y-10 -mt-5">
+                        <h1 className="text-[120px] font-bold text-[#052F1B] leading-none">
                             Learn. Grow.
                             <br />
                             Thrive
@@ -121,26 +121,11 @@ const HeroSection = () => {
                             <span className="text-[#0F3D2C]">Financially.</span>
                         </h1>
 
-                        <p className="text-base lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl text-[#052F1B] max-w-xl xl:max-w-2xl 2xl:max-w-3xl leading-relaxed">
+                        <p className="text-[22px] text-[#052F1B] max-w-xl xl:max-w-2xl 2xl:max-w-3xl leading-relaxed">
                             From budgeting to investing, Nurture Haven empowers neurodivergent and
                             neurotypical children, teenagers and young adults with the tools and insights
                             to take control of their financial journey.
                         </p>
-
-                        {/* <div className="flex flex-wrap gap-4">
-                            <a
-                                href="#footer"
-                                className="px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
-                            >
-                                Join the Waitlist
-                            </a>
-                            <a 
-                                href="#about"
-                                className="px-8 py-4 bg-white text-[#052F1B] border-2 border-[#052F1B] rounded-xl font-semibold hover:bg-[#F5EDE4] transition-all duration-300"
-                            >
-                                Learn More
-                            </a>
-                        </div> */}
                     </div>
 
                     {/* Right Content - Image Collage (Desktop) */}

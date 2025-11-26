@@ -58,7 +58,7 @@ const MoneyQuestSection = () => {
                 <div className="px-6 text-center">
                     {/* Content */}
                     <div className="space-y-6 mb-12 pt-10">
-                        <h2 className="text-5xl md:text-6xl font-bold text-[#052F1B]">
+                        <h2 className="text-[120px] font-bold text-[#052F1B]">
                             Money
                             <br />
                             Quest

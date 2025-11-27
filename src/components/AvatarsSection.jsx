@@ -15,10 +15,10 @@ const AvatarsSection = () => {
             <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#052F1B] mb-6">
+                    <h2 className="text-[82px] md:text-[100px] lg:text-[120px] font-bold text-[#052F1B] mb-6 leading-none">
                         Money Quest
                     </h2>
-                    <p className="text-lg md:text-xl text-[#052F1B] max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg lg:text-[20px] md:text-xl text-[#052F1B] max-w-3xl mx-auto leading-relaxed">
                         Money Quest is a product of Nurture haven that makes financial learning easy and exciting. Through fun quests and daily challenges, you'll learn how to save, invest, and grow wealth confidently.
                     </p>
                     <a
@@ -30,7 +30,7 @@ const AvatarsSection = () => {
                 </div>
 
                 {/* Avatars Grid - Desktop */}
-                <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-6 gap-0 items-center justify-items-center">
+                <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-6 -gap-12 items-center justify-items-center">
                     {avatars.map((avatar) => (
                         <div
                             key={avatar.id}

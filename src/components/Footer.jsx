@@ -45,14 +45,14 @@ const Footer = () => {
         <footer id="footer" className="relative">
             {/* Main Footer Section */}
             <div className="bg-[#FCF5EB] py-12 px-6">
-                <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-                    <div className="grid md:grid-cols-3 gap-8 items-start">
+                <div className="w-full px-0 sm:px-0 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+                    <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
                         {/* Logo Section */}
-                        <div className="flex items-center">
+                        <div className="flex items-start">
                             <img
                                 src="/hero-section-logo.png"
                                 alt="Nurture Haven Logo"
-                                className="h-12 w-32"
+                                className="h-18 w-48 md:w-48 md:h-18 lg:w-62 lg:h-22"
                             />
                         </div>
 

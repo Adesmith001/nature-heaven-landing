@@ -4,7 +4,7 @@ const HeroSection = () => {
     return (
         <section className="relative min-h-screen bg-[#FCF5EB] overflow-hidden pt-17 xl:pt-10 2xl:pt-20 flex items-center">
             {/* Grid Background Pattern */}
-            <div className="absolute inset-0 z-0 opacity-30">
+            <div className="absolute inset-0 z-0 opacity-30 hidden md:block">
                 <div className="h-full w-full" style={{
                     backgroundImage: `
                         linear-gradient(to right, #26D367 1px, transparent 1px),
@@ -77,7 +77,7 @@ const HeroSection = () => {
                 <div className="lg:hidden">
                     {/* Text Content - Top */}
                     <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6 sm:mb-7 md:mb-8">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#052F1B] leading-tight">
+                        <h1 className="text-[64px] sm:text-4xl md:text-[95px] font-bold text-[#052F1B] leading-none">
                             Learn. Grow.
                             <br />
                             Thrive
@@ -85,26 +85,51 @@ const HeroSection = () => {
                             <span className="text-[#0F3D2C]">Financially.</span>
                         </h1>
 
-                        <p className="text-sm sm:text-base md:text-lg text-[#052F1B] leading-relaxed">
+                        <p className="text-[11px] sm:text-base md:text-lg text-[#052F1B] leading-relaxed">
                             From budgeting to investing, Nurture Haven empowers neurodivergent and
                             neurotypical children, teenagers and young adults with the tools and insights
                             to take control of their financial journey.
                         </p>
                     </div>
 
-                    {/* Image Grid - Stacked */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
-                        <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
-                            <img src="/hero-section1.png" alt="Family" className="w-full h-full object-cover" />
+                    {/* Image Grid with Coins - Stacked */}
+                    <div className="relative">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mb-8">
+                            <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
+                                <img src="/hero-section1.png" alt="Family" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
+                                <img src="/hero-section2.png" alt="Child" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
+                                <img src="/hero-section3.png" alt="Elderly" className="w-full h-full object-cover" />
+                            </div>
+                            <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
+                                <img src="/hero-section4.png" alt="Teen" className="w-full h-full object-cover" />
+                            </div>
                         </div>
-                        <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
-                            <img src="/hero-section2.png" alt="Child" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
-                            <img src="/hero-section3.png" alt="Elderly" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
-                            <img src="/hero-section4.png" alt="Teen" className="w-full h-full object-cover" />
+
+                        {/* Decorative Coins - Bottom */}
+                        <div className="relative w-full h-32 sm:h-40 md:h-48 -mt-4">
+
+                            {/* Coin Stacks - Right (with gap) */}
+                            <div className="absolute -right-4 sm:-right-6 md:-right-8 bottom-0 flex items-end -space-x-4">
+                                {/* Coin Stack - Center (coin2) */}
+                                <div className="relative z-10 w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32">
+                                    <img src="/coin2.png" alt="" className="w-full h-full object-contain" />
+                                </div>
+
+                                {/* Coin Stack - Right (coin1) */}
+                                <div className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32">
+                                    <img src="/coin1.png" alt="" className="w-full h-full object-contain" />
+                                </div>
+                            </div>
+                            {/* Coin Stack - Left */}
+                            <div className="absolute -left-18 -mb-9 sm:-left-6 md:-left-16 bottom-0 w-86 sm:w-48 md:w-96 md:-mb-12 h-40 sm:h-48 md:h-56">
+                                <img src="/coin3.png" alt="" className="w-full h-full object-contain" />
+                            </div>
+
+
                         </div>
                     </div>
                 </div>

@@ -44,8 +44,8 @@ const Footer = () => {
     return (
         <footer id="footer" className="relative">
             {/* Main Footer Section */}
-            <div className="bg-[#FCF5EB] py-12 px-6">
-                <div className="w-full px-0 sm:px-0 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+            <div className="bg-[#FCF5EB] py-12">
+                <div className="w-full left-0 px-0 sm:px-0 md:px-0 lg:px-10 xl:px-12 2xl:px-16">
                     <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
                         {/* Logo Section */}
                         <div className="flex items-start">
@@ -57,7 +57,7 @@ const Footer = () => {
                         </div>
 
                         {/* Social Media Section */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 left-0 px-3">
                             <h3 className="text-[#052F1B] font-semibold text-lg">
                                 Contact us via our socials
                             </h3>
@@ -95,12 +95,12 @@ const Footer = () => {
                         </div>
 
                         {/* Newsletter Section */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 px-3 left-0">
                             <h3 className="text-[#052F1B] font-semibold text-lg">
                                 Newsletter
                             </h3>
                             <p className="text-[#052F1B] text-sm leading-relaxed">
-                                Subscribe to our MailChimp newsletter and stay up to date with all events coming straight in your mailbox.
+                                We're rolling out something amazing soon and we'd love to tell you all about it when it drops.
                             </p>
                             <form onSubmit={handleSubmit} className="space-y-3">
                                 <input

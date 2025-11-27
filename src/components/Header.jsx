@@ -5,7 +5,7 @@ const Header = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-99 bg-[#FCF5EB] backdrop-blur-sm">
-            <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-4 z-10">
+            <div className="w-full px-0 sm:px-0 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-4 z-10">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-2">

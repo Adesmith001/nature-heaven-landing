@@ -77,7 +77,7 @@ const HeroSection = () => {
                 <div className="lg:hidden">
                     {/* Text Content - Top */}
                     <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6 sm:mb-7 md:mb-8">
-                        <h1 className="text-[64px] sm:text-4xl md:text-[95px] font-bold text-[#052F1B] leading-none">
+                        <h1 className="text-[58px] sm:text-[58px] md:text-[95px] font-bold text-[#052F1B] leading-none">
                             Learn. Grow.
                             <br />
                             Thrive
@@ -110,18 +110,18 @@ const HeroSection = () => {
                         </div>
 
                         {/* Decorative Coins - Bottom */}
-                        <div className="relative w-full h-32 sm:h-40 md:h-48 -mt-4">
+                        <div className="relative w-full h-32 sm:h-40 md:h-48">
 
                             {/* Coin Stacks - Right (with gap) */}
-                            <div className="absolute -right-4 sm:-right-6 md:-right-8 bottom-0 flex items-end -space-x-4">
+                            <div className="absolute -right-4 sm:-right-6 md:-right-8 bottom-0 flex items-end -space-x-8 mb-5">
                                 {/* Coin Stack - Center (coin2) */}
-                                <div className="relative z-10 w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32">
+                                <div className="relative z-10 w-24 sm:w-28 md:w-32 h-28 sm:h-28 md:h-32">
                                     <img src="/coin2.png" alt="" className="w-full h-full object-contain" />
                                 </div>
 
                                 {/* Coin Stack - Right (coin1) */}
-                                <div className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32">
-                                    <img src="/coin1.png" alt="" className="w-full h-full object-contain" />
+                                <div className="w-24 sm:w-28 md:w-32 h-20 sm:h-28 md:h-32 z-20">
+                                    <img src="/coin5.png" alt="" className="w-full h-full object-contain" />
                                 </div>
                             </div>
                             {/* Coin Stack - Left */}

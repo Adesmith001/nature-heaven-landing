@@ -104,29 +104,29 @@ const HeroSection = () => {
                             <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
                                 <img src="/hero-section3.png" alt="Elderly" className="w-full h-full object-cover" />
                             </div>
-                            <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden">
+                            <div className="w-full aspect-4/3 rounded-2xl sm:rounded-3xl overflow-hidden mb-12">
                                 <img src="/hero-section4.png" alt="Teen" className="w-full h-full object-cover" />
                             </div>
                         </div>
 
                         {/* Decorative Coins - Bottom */}
-                        <div className="relative w-full h-32 sm:h-40 md:h-48">
+                        <div className="relative w-full h-50 sm:h-40 md:h-48">
 
                             {/* Coin Stacks - Right (with gap) */}
-                            <div className="absolute -right-4 sm:-right-6 md:-right-8 bottom-0 flex items-end -space-x-8 mb-10">
+                            <div className="absolute -right-4 sm:-right-6 md:-right-8 bottom-0 flex items-end -space-x-8 mb-22">
                                 {/* Coin Stack - Center (coin2) */}
-                                <div className="relative z-10 w-24 sm:w-28 md:w-32 h-30 sm:h-28 md:h-32">
+                                <div className="relative z-10 w-32 sm:w-28 md:w-32 h-36 sm:h-28 md:h-32">
                                     <img src="/coin2.png" alt="" className="w-full h-full object-contain" />
                                 </div>
 
                                 {/* Coin Stack - Right (coin1) */}
-                                <div className="w-24 sm:w-28 md:w-32 h-20 sm:h-28 md:h-32 z-20">
+                                <div className="w-30 sm:w-28 md:w-32 h-27 sm:h-28 md:h-32 z-20">
                                     <img src="/coin5.png" alt="" className="w-full h-full object-contain" />
                                 </div>
                             </div>
                             {/* Coin Stack - Left */}
-                            <div className="absolute -left-18 -mb-9 sm:-left-6 md:-left-16 bottom-0 w-86 sm:w-48 md:w-96 md:-mb-12 h-40 sm:h-48 md:h-56">
-                                <img src="/coin3.png" alt="" className="w-full h-full object-contain" />
+                            <div className="absolute -left-14 -mb-12 sm:-left-2 md:-left-16 bottom-0 w-96 sm:w-48 md:w-96 md:-mb-12 h-62 sm:h-48 md:h-56">
+                                <img src="/coin6.png" alt="" className="w-full h-full object-contain" />
                             </div>
 
 

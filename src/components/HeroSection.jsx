@@ -113,9 +113,9 @@ const HeroSection = () => {
                         <div className="relative w-full h-32 sm:h-40 md:h-48">
 
                             {/* Coin Stacks - Right (with gap) */}
-                            <div className="absolute -right-4 sm:-right-6 md:-right-8 bottom-0 flex items-end -space-x-8 mb-5">
+                            <div className="absolute -right-4 sm:-right-6 md:-right-8 bottom-0 flex items-end -space-x-8 mb-10">
                                 {/* Coin Stack - Center (coin2) */}
-                                <div className="relative z-10 w-24 sm:w-28 md:w-32 h-28 sm:h-28 md:h-32">
+                                <div className="relative z-10 w-24 sm:w-28 md:w-32 h-30 sm:h-28 md:h-32">
                                     <img src="/coin2.png" alt="" className="w-full h-full object-contain" />
                                 </div>
 

@@ -1,6 +1,6 @@
 // IndexNow API Key - Generate your own at https://www.bing.com/indexnow
 // This is a placeholder - replace with your actual key
-export const INDEXNOW_KEY = "your-indexnow-api-key-here";
+export const INDEXNOW_KEY = "dce85406568b45eb91038927933c14d8";
 
 /**
  * Submit URLs to IndexNow for instant indexing on Bing, Yandex, and other search engines
@@ -9,7 +9,7 @@ export const INDEXNOW_KEY = "your-indexnow-api-key-here";
  */
 export async function submitToIndexNow(urls) {
   const urlArray = Array.isArray(urls) ? urls : [urls];
-  const host = "naturehaven.com"; // Replace with your actual domain
+  const host = "https://www.nurtureehaven.com/"; 
   const keyLocation = `https://${host}/${INDEXNOW_KEY}.txt`;
 
   try {
@@ -45,8 +45,8 @@ export async function submitToIndexNow(urls) {
 export function submitSiteToIndexNow() {
   const urls = [
     "https://www.nurtureehaven.com/",
-    "https://www.nurtureehaven.com/#money-quest",
-    "https://www.nurtureehaven.com/#avatars",
+    "https://www.nurtureehaven.com/#about",
+    "https://www.nurtureehaven.com/#footer",
     // Add more URLs as you create new pages
   ];
 

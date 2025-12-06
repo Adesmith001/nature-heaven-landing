@@ -1,6 +1,3 @@
-// FAQ Schema for Rich Snippets in Google
-// Add this to your homepage for instant rich results
-
 export const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -193,7 +190,7 @@ export const breadcrumbSchema = {
       item: "https://www.nurtureehaven.com/#pricing",
     },
   ],
-};  
+};
 
 // Export all schemas
 export const allSchemas = {

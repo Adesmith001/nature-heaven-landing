@@ -48,7 +48,7 @@ const Header = () => {
 
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
-                    <nav className="md:hidden mt-4 pt-4 border-t border-[#E5D5C4] flex flex-col gap-3 animate-fadeIn">
+                    <nav className="md:hidden mt-4 pt-4 px-2 border-t border-[#E5D5C4] flex flex-col gap-3 animate-fadeIn">
                         <a
                             href="#home"
                             className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2"
@@ -57,7 +57,7 @@ const Header = () => {
                             Home
                         </a>
                         <a
-                            href="#footer"
+                            href="#about"
                             className="px-6 py-2.5 bg-[#0F3D2C] text-white rounded-lg font-medium hover:bg-[#16A34A] transition-all duration-300 text-center"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >

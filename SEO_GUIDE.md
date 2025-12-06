@@ -103,14 +103,14 @@ function App() {
   title="Custom Page Title"
   description="Custom description for this specific page"
   keywords="specific, keywords, for, this, page"
-  url="https://naturehaven.com/about"
+  url="https://www.nurtureehaven.com/about"
   image="/about-page-image.png"
   type="article"
   publishedTime="2025-12-06T00:00:00Z"
   modifiedTime="2025-12-06T12:00:00Z"
   section="Education"
   tags={["financial literacy", "kids education"]}
-  canonicalUrl="https://naturehaven.com/about"
+  canonicalUrl="https://www.nurtureehaven.com/about"
 />
 ```
 

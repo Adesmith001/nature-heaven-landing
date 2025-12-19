@@ -1,6 +1,7 @@
 import React from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
+import Snowfall from "react-snowfall";
 import SEO from "./components/SEO";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -21,7 +22,17 @@ function App() {
         type="website"
         twitterHandle="@nurture_haven"
       />
-      <div className="min-h-screen bg-[#F5EDE4]">
+      <div className="min-h-screen bg-[#F5EDE4] relative">
+        <Snowfall
+          color="#ffffff"
+          snowflakeCount={500}
+          style={{
+            position: 'fixed',
+            width: '100vw',
+            height: '100vh',
+            zIndex: 9999
+          }}
+        />
         <Header />
         <HeroSection />
         <MoneyQuestSection />

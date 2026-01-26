@@ -4,7 +4,17 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-99 bg-[#FCF5EB] backdrop-blur-sm">
+        <>
+            {/* Dimming Overlay */}
+            {isMobileMenuOpen && (
+                <div 
+                    className="fixed inset-0 bg-black/30 z-40 md:hidden transition-opacity duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    aria-hidden="true"
+                />
+            )}
+            
+            <header className="fixed top-0 left-0 right-0 z-99 bg-[#FCF5EB] backdrop-blur-sm">
             <div className="w-full px-0 sm:px-0 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-4 z-10">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
@@ -14,6 +24,12 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8">
+                        <a
+                            href="https://blog.nurtureehaven.com/" target="_blank" rel="noopener noreferrer"
+                            className="px-6 py-2.5 bg-[#052F1B] text-white rounded-lg font-medium hover:bg-[#16A34A] transition-all duration-300 hover:shadow-lg hover:shadow-[#22C55E]/20"
+                        >
+                            Blog
+                        </a>
                         <a
                             href="#about"
                             className="px-6 py-2.5 bg-[#052F1B] text-white rounded-lg font-medium hover:bg-[#16A34A] transition-all duration-300 hover:shadow-lg hover:shadow-[#22C55E]/20"
@@ -51,10 +67,17 @@ const Header = () => {
                     <nav className="md:hidden mt-4 pt-4 px-2 border-t border-[#E5D5C4] flex flex-col gap-3 animate-fadeIn">
                         <a
                             href="#home"
-                            className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2"
+                            className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2 text-center"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Home
+                        </a>
+                        <a
+                            href="https://blog.nurtureehaven.com/" target="_blank" rel="noopener noreferrer"
+                            className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2 text-center"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Blog
                         </a>
                         <a
                             href="#about"
@@ -67,6 +90,7 @@ const Header = () => {
                 )}
             </div>
         </header>
+        </>
     );
 };
 

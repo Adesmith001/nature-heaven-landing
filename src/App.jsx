@@ -3,6 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Snowfall from "react-snowfall";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import SEO from "./components/SEO";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -16,6 +17,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTopButton />
         <Header />
         <Routes>
           <Route

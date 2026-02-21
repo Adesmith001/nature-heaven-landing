@@ -47,7 +47,7 @@ const SEO = ({
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "Customer Service",
-          email: "moneyquest25@gmail.com",
+          email: "info@nurtureehaven.com",
         },
       },
       {

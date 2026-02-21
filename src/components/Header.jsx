@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,7 +20,9 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-2">
-                        <img src="/hero-section-logo.png" alt="Nature Haven Logo" className="w-32 h-12" />
+                        <Link to="/">
+                            <img src="/hero-section-logo.png" alt="Nature Haven Logo" className="w-32 h-12" />
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation */}
@@ -65,13 +68,13 @@ const Header = () => {
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
                     <nav className="md:hidden mt-4 pt-4 px-2 border-t border-[#E5D5C4] flex flex-col gap-3 animate-fadeIn">
-                        <a
-                            href="#home"
+                        <Link
+                            to="/"
                             className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2 text-center"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Home
-                        </a>
+                        </Link>
                         <a
                             href="https://blog.nurtureehaven.com/" target="_blank" rel="noopener noreferrer"
                             className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2 text-center"
@@ -81,7 +84,7 @@ const Header = () => {
                         </a>
                         <a
                             href="#about"
-                            className="px-6 py-2.5 bg-[#0F3D2C] text-white rounded-lg font-medium hover:bg-[#16A34A] transition-all duration-300 text-center"
+                            className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2 text-center"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             About Us

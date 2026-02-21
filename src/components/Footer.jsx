@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const [formData, setFormData] = useState({
@@ -94,6 +95,27 @@ const Footer = () => {
                             </div>
                         </div>
 
+                        {/* Legal & Contact Section */}
+                        <div className="space-y-4 left-0 px-3">
+                            <h3 className="text-[#052F1B] font-semibold text-lg">
+                                Legal & Contact
+                            </h3>
+                            <div className="space-y-3">
+                                <Link
+                                    to="/privacy-policy"
+                                    className="block text-[#052F1B] hover:text-[#26D367] transition-colors duration-300"
+                                >
+                                    Privacy Policy
+                                </Link>
+                                <a
+                                    href="mailto:info@nurtureehaven.com"
+                                    className="block text-[#052F1B] hover:text-[#26D367] transition-colors duration-300"
+                                >
+                                    info@nurtureehaven.com
+                                </a>
+                            </div>
+                        </div>
+
                         {/* Newsletter Section */}
                         <div className="space-y-4 px-3 left-0">
                             <h3 className="text-[#052F1B] font-semibold text-lg">
@@ -152,7 +174,7 @@ const Footer = () => {
             <div className="bg-[#26D367] py-6 px-6">
                 <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-center">
                     <p className="text-white text-sm">
-                        © 2025 Nurture Haven. All rights reserved.
+                        © 2026 Nurture Haven. All rights reserved.
                     </p>
                 </div>
             </div>

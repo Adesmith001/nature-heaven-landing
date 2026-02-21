@@ -80,8 +80,8 @@ const PrivacyPolicy = () => {
     return (
         <>
             <SEO
-                title="Privacy Policy - Nature Haven"
-                description="Privacy policy for Nature Haven. Learn how we protect your data and personal information."
+                title="Privacy Policy - Nurture Haven"
+                description="Privacy policy for Nurture Haven. Learn how we protect your data and personal information."
                 url="https://www.nurtureehaven.com/privacy-policy"
                 type="website"
             />

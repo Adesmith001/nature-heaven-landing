@@ -10,4 +10,8 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
+  server: {
+    middlewareMode: false,
+    historyApiFallback: true,
+  },
 })

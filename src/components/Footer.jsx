@@ -103,6 +103,7 @@ const Footer = () => {
                             <div className="space-y-3">
                                 <Link
                                     to="/privacy-policy"
+                                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                                     className="block text-[#052F1B] hover:text-[#26D367] transition-colors duration-300"
                                 >
                                     Privacy Policy
@@ -174,7 +175,7 @@ const Footer = () => {
             <div className="bg-[#26D367] py-6 px-6">
                 <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 text-center">
                     <p className="text-white text-sm">
-                        © 2026 Nurture Haven. All rights reserved.
+                        © 2025 - {new Date().getFullYear()} Nurture Haven. All rights reserved.
                     </p>
                 </div>
             </div>

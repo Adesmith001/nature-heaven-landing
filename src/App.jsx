@@ -26,8 +26,8 @@ function App() {
             element={
               <>
                 <SEO
-                  title="Nature Haven - Financial Literacy | Money Quest Adventure"
-                  description="Transform your financial future with Nature Haven's Money Quest. An engaging, gamified learning platform that teaches individuals essential money management skills through interactive adventures. Join thousands of people building financially smart."
+                  title="Nurture Haven - Financial Literacy | Money Quest Adventure"
+                  description="Transform your financial future with Nurture Haven's Money Quest. An engaging, gamified learning platform that teaches individuals essential money management skills through interactive adventures. Join thousands of people building financially smart."
                   keywords="financial literacy, money management, finance app, teach people about money, financial education games, money quest, banking, savings for people, budgeting, financial skills for people, parenting finance, educational games, learn money skills"
                   url="https://www.nurtureehaven.com/"
                   image="/hero-section-logo.png"

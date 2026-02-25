@@ -11,6 +11,7 @@ import MoneyQuestSection from "./components/MoneyQuestSection";
 import AvatarsSection from "./components/AvatarsSection";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsAndCondition from "./components/TermsAndCondition";
 import "./index.css";
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
             }
           />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/termsandcondition" element={<TermsAndCondition />} />
         </Routes>
         <Footer />
       </Router>

@@ -108,6 +108,13 @@ const Footer = () => {
                                 >
                                     Privacy Policy
                                 </Link>
+                                <Link
+                                    to="/termsandcondition"
+                                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                                    className="block text-[#052F1B] hover:text-[#26D367] transition-colors duration-300"
+                                >
+                                    Terms and Conditions
+                                </Link>
                                 <a
                                     href="mailto:info@nurtureehaven.com"
                                     className="block text-[#052F1B] hover:text-[#26D367] transition-colors duration-300"

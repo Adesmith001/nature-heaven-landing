@@ -1,4 +1,49 @@
 import React from 'react';
+import { FaApple, FaGooglePlay } from 'react-icons/fa';
+
+const storeLinks = [
+    {
+        name: 'Google Play',
+        href: 'https://play.google.com/store/apps/details?id=com.expo.moneyquest',
+        icon: FaGooglePlay,
+        label: 'GET IT ON',
+    },
+    {
+        name: 'App Store',
+        href: 'https://apps.apple.com/us/app/moneyquest-by-nurture-haven/id6756646195',
+        icon: FaApple,
+        label: 'Download on the',
+    },
+];
+
+const StoreButtons = ({ centered = false }) => (
+    <div className={`space-y-3 ${centered ? 'flex flex-col items-center' : ''}`}>
+        <p className={`text-sm font-semibold uppercase tracking-[0.18em] text-[#052F1B]/70 ${centered ? 'text-center' : ''}`}>
+            Download Money Quest
+        </p>
+
+        <div className={`flex flex-wrap gap-3 ${centered ? 'justify-center' : ''}`}>
+            {storeLinks.map(({ name, href, icon, label }) => (
+                <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Download Money Quest on ${name}`}
+                    className="inline-flex items-center gap-3 rounded-2xl border border-[#052F1B]/12 bg-[#052F1B] px-5 py-3 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#031c10] hover:shadow-[0_18px_40px_rgba(5,47,27,0.18)]"
+                >
+                    {React.createElement(icon, { className: 'text-2xl shrink-0' })}
+                    <span className="flex flex-col leading-tight">
+                        <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-white/70">
+                            {label}
+                        </span>
+                        <span className="text-base font-semibold">{name}</span>
+                    </span>
+                </a>
+            ))}
+        </div>
+    </div>
+);
 
 const MoneyQuestSection = () => {
     return (
@@ -19,12 +64,9 @@ const MoneyQuestSection = () => {
                                 Money Quest is a product of Nurture Haven that makes financial learning easy and exciting. Through fun quests and daily challenges, you'll learn how to save, invest, and grow wealth confidently.
                             </p>
 
-                            <a
-                                href="#footer"
-                                className="inline-block px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
-                            >
-                                Join the Waitlist
-                            </a>
+                           
+
+                            <StoreButtons />
                         </div>
 
                         {/* Right Content - Phone Mockups */}
@@ -68,12 +110,7 @@ const MoneyQuestSection = () => {
                             Money Quest is a product of Nurture Haven that makes financial learning easy and exciting. Through fun quests and daily challenges, you'll learn how to save, invest, and grow wealth confidently.
                         </p>
 
-                        <a
-                            href="#footer"
-                            className="inline-block px-8 py-4 bg-[#26D367] text-white rounded-xl font-semibold hover:bg-[#16A34A] transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer"
-                        >
-                            Join the Waitlist
-                        </a>
+                        <StoreButtons centered />
                     </div>
 
                     {/* Phone Images - Overlapping with specific positioning */}

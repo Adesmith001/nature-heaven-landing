@@ -22,10 +22,6 @@ Create a collection whose ID is `work_posts`, or set `VITE_APPWRITE_WORK_POSTS_C
 | `coverImageUrl` | String | 2000 | No |
 | `coverImagePublicId` | String | 500 | No |
 | `coverImageAlt` | String | 300 | No |
-| `coverImageWidth` | Integer | — | No |
-| `coverImageHeight` | Integer | — | No |
-| `coverImageFormat` | String | 30 | No |
-| `authorName` | String | 160 | No |
 | `publishedAt` | Datetime | — | No |
 | `eventStartsAt` | Datetime | — | No |
 | `eventTimezone` | String | 80 | No |
@@ -37,9 +33,12 @@ Create a collection whose ID is `work_posts`, or set `VITE_APPWRITE_WORK_POSTS_C
 | `isFeaturedInHeader` | Boolean | — | Yes |
 | `seoTitle` | String | 70 | No |
 | `seoDescription` | String | 170 | No |
-| `createdBy` | String | 64 | Yes |
 
 Wait until every attribute reports `Available` before creating indexes.
+
+The dashboard populates `coverImageUrl` and `coverImagePublicId` after a user uploads a JPEG or PNG. There is no manual image URL, width, height, format, author, or creator field. Public articles always display the author as **Nurture Haven**.
+
+If these collections already exist from an earlier setup, remove `coverImageWidth`, `coverImageHeight`, `coverImageFormat`, `authorName`, and `createdBy` from `work_posts`. Also remove `width`, `height`, and `format` from `work_post_images` after confirming no other feature uses them.
 
 ### Indexes
 
@@ -73,9 +72,6 @@ Create a collection whose ID is `work_post_images`, or configure a custom ID wit
 | `url` | String | 2000 | Yes |
 | `publicId` | String | 500 | Yes |
 | `altText` | String | 300 | Yes |
-| `width` | Integer | — | No |
-| `height` | Integer | — | No |
-| `format` | String | 30 | No |
 | `sortOrder` | Integer | — | Yes |
 
 ### Indexes
@@ -99,10 +95,10 @@ VITE_APPWRITE_WORK_POSTS_COLLECTION_ID=work_posts
 VITE_APPWRITE_WORK_POST_IMAGES_COLLECTION_ID=work_post_images
 ```
 
-The dashboard also needs:
+The dashboard also needs the image-upload API URL. The landing site does not use this variable because it reads published content directly from Appwrite:
 
 ```env
-VITE_API_BASE_URL=https://<moneyquest-backend-host>
+VITE_API_BASE_URL=https://moneyquestproject-demo-development.up.railway.app/
 ```
 
 These browser variables are identifiers, not secrets. Never add an Appwrite API key or Cloudinary secret to a `VITE_*` variable.

@@ -7,7 +7,7 @@ export default function WorkCard({ post }) {
       <Link to={`/our-work/${post.slug}`} className="block focus:outline-none focus-visible:ring-4 focus-visible:ring-[#26D367]/40">
         <div className="aspect-[16/10] overflow-hidden bg-[#DDEBDD]">
           {post.coverImageUrl ? (
-            <img src={post.coverImageUrl} alt={post.coverImageAlt || ''} className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy" />
+            <img src={post.coverImageUrl} alt={post.coverImageAlt || ''} className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]" loading="lazy" />
           ) : (
             <div className="flex h-full items-end bg-[#DDEBDD] p-6 text-5xl font-bold text-[#0F3D2C]/20">NH</div>
           )}

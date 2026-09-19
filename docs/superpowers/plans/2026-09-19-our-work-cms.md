@@ -36,7 +36,7 @@ Run landing `npm run lint && npm run build`, dashboard `pnpm test && pnpm run li
 
 - [ ] **Step 1: Write failing auth and upload tests**
 
-Test missing JWT returns 401, non-admin Appwrite account data returns 403, invalid MIME/oversized files return 400/413, and an admin upload maps Cloudinary metadata to `{url, publicId, width, height, format}`.
+Test missing JWT returns 401, non-admin Appwrite account data returns 403, invalid MIME/oversized files return 400/413, and an admin upload maps Cloudinary metadata to `{url, publicId}`.
 
 - [ ] **Step 2: Verify tests fail for the missing router**
 
@@ -44,7 +44,7 @@ Run `pytest tests/test_our_work_upload.py -q`; expect import or route failures c
 
 - [ ] **Step 3: Implement minimal auth and upload route**
 
-Use `httpx.AsyncClient` to call `${APPWRITE_ENDPOINT}/account` with `X-Appwrite-Project` and `X-Appwrite-JWT`. Accept `admin`/`ceo` labels or matching preferences, validate JPEG/PNG/WebP/GIF up to 10 MB, upload to `nurture-haven/our-work`, and return secure metadata.
+Use `httpx.AsyncClient` to call `${APPWRITE_ENDPOINT}/account` with `X-Appwrite-Project` and `X-Appwrite-JWT`. Accept `admin`/`ceo` labels or matching preferences, validate JPEG/PNG up to 10 MB, upload to `nurture-haven/our-work`, and return the secure URL and public ID.
 
 - [ ] **Step 4: Register router and verify**
 

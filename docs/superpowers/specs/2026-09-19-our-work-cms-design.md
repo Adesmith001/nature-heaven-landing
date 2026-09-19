@@ -23,7 +23,7 @@ The dashboard uses the existing Appwrite browser SDK and logged-in Appwrite sess
 
 The public landing site uses the Appwrite Web SDK with the public project ID. It queries only `status = published`; Appwrite document permissions provide the second enforcement layer so drafts cannot be fetched by an unauthenticated visitor.
 
-Cover and article images are uploaded through the existing Python backend. Before accepting an upload, the endpoint validates an Appwrite JWT, loads the authenticated user, and requires an `admin` or `ceo` label/role consistent with the dashboard's existing administrator detection. The server uploads to `nurture-haven/our-work`, returns Cloudinary metadata, and never sends the Cloudinary API secret to the browser.
+Cover and article images are uploaded through the existing Python backend. Before accepting an upload, the endpoint validates an Appwrite JWT, loads the authenticated user, and requires an `admin` or `ceo` label/role consistent with the dashboard's existing administrator detection. The server accepts only JPEG and PNG files, uploads to `nurture-haven/our-work`, returns the URL and public ID, and never sends the Cloudinary API secret to the browser.
 
 ## Appwrite Schema
 
@@ -41,10 +41,6 @@ Cover and article images are uploaded through the existing Python backend. Befor
 | `coverImageUrl` | string, 2000 | no | Cloudinary secure URL |
 | `coverImagePublicId` | string, 500 | no | Used for asset replacement/deletion |
 | `coverImageAlt` | string, 300 | no | Required by the dashboard when a cover exists |
-| `coverImageWidth` | integer | no | Cloudinary metadata |
-| `coverImageHeight` | integer | no | Cloudinary metadata |
-| `coverImageFormat` | string, 30 | no | Cloudinary metadata |
-| `authorName` | string, 160 | no | Display author |
 | `publishedAt` | datetime | no | Set when published; preserved on later edits |
 | `eventStartsAt` | datetime | no | UTC instant for webinar/meeting/event |
 | `eventTimezone` | string, 80 | no | IANA time-zone label used for display |
@@ -56,7 +52,6 @@ Cover and article images are uploaded through the existing Python backend. Befor
 | `isFeaturedInHeader` | boolean | yes | Default `false` |
 | `seoTitle` | string, 70 | no | Falls back to `title` |
 | `seoDescription` | string, 170 | no | Falls back to `excerpt`/`subtitle` |
-| `createdBy` | string, 64 | yes | Appwrite user ID |
 
 Indexes:
 
@@ -115,7 +110,7 @@ Add an `Our Work` sidebar item and two protected routes:
 - `/our-work`: searchable and filterable table/list with status, content type, publish date, and featured indicator. Actions include create, edit, preview, publish/unpublish, archive, and delete with confirmation.
 - `/our-work/new` and `/our-work/:id/edit`: a single editor used for create and update.
 
-The editor contains content, media, event/link, and SEO sections. Draft saves require only the core record shape; publishing runs full public validation. Preview renders the same presentation component used by the editor's preview panel without temporarily publishing the record.
+The editor contains content, media, event/link, and SEO sections. Images are selected from the user's device and uploaded as JPEG or PNG files; there is no manual URL or image-metadata input. The author is fixed to `Nurture Haven` in the public presentation and is not editable. Draft saves require only the core record shape; publishing runs full public validation. Preview renders the same presentation component used by the editor's preview panel without temporarily publishing the record.
 
 Loading, empty, validation, Appwrite error, upload-progress, and destructive-confirmation states are explicit. Existing protected routing remains in place, and the page also checks the existing administrator role helper before allowing CMS operations.
 
@@ -133,7 +128,7 @@ SEO metadata uses the existing `SEO` component with per-post title, description,
 
 ## API and Security
 
-The backend adds an `Our Work` upload route that accepts one image and an Appwrite JWT. It verifies the JWT with the configured Appwrite endpoint/project, rejects non-admin users, validates MIME type and size, uploads into `nurture-haven/our-work`, and returns `url`, `publicId`, `width`, `height`, and `format`.
+The backend adds an `Our Work` upload route that accepts one JPEG or PNG image and an Appwrite JWT. It verifies the JWT with the configured Appwrite endpoint/project, rejects non-admin users, validates MIME type and size, uploads into `nurture-haven/our-work`, and returns only `url` and `publicId`.
 
 The dashboard requests a short-lived JWT from the existing Appwrite session for each upload and sends it to the backend. Cloudinary credentials stay server-side. CORS is limited to configured dashboard origins in deployed environments.
 

@@ -1,5 +1,9 @@
 # React + Vite
 
+## Our Work content hub
+
+The public `/our-work` routes read published content from Appwrite. Configure the five `VITE_APPWRITE_*` values documented in [`docs/our-work-appwrite-setup.md`](docs/our-work-appwrite-setup.md) before deployment. No Appwrite API key or Cloudinary secret belongs in this frontend.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

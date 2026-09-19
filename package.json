@@ -7,15 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "test": "node --test src/features/our-work/*.test.js",
     "preview": "vite preview",
     "host": "vite --host"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
+    "appwrite": "^27.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.0",
     "react-snowfall": "^2.4.0"
   },

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import FeaturedEventAnnouncement from './FeaturedEventAnnouncement';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +16,8 @@ const Header = () => {
                 />
             )}
             
-            <header className="fixed top-0 left-0 right-0 z-99 bg-[#FCF5EB] backdrop-blur-sm">
+            <header className="fixed top-0 left-0 right-0 z-[100] bg-[#FCF5EB] backdrop-blur-sm">
+            <FeaturedEventAnnouncement />
             <div className="w-full px-0 sm:px-0 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-4 z-10">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
@@ -27,6 +29,12 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8">
+                        <Link
+                            to="/our-work"
+                            className="font-medium text-[#052F1B] transition-colors hover:text-[#16A34A]"
+                        >
+                            Our Work
+                        </Link>
                         <a
                             href="https://blog.nurtureehaven.com/" target="_blank" rel="noopener noreferrer"
                             className="px-6 py-2.5 bg-[#052F1B] text-white rounded-lg font-medium hover:bg-[#16A34A] transition-all duration-300 hover:shadow-lg hover:shadow-[#22C55E]/20"
@@ -74,6 +82,13 @@ const Header = () => {
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Home
+                        </Link>
+                        <Link
+                            to="/our-work"
+                            className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2 text-center"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Our Work
                         </Link>
                         <a
                             href="https://blog.nurtureehaven.com/" target="_blank" rel="noopener noreferrer"

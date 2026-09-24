@@ -29,12 +29,12 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8">
-                        <Link
+                        {/* <Link
                             to="/our-work"
                             className="font-medium text-[#052F1B] transition-colors hover:text-[#16A34A]"
                         >
                             Our Work
-                        </Link>
+                        </Link> */}
                         <a
                             href="https://blog.nurtureehaven.com/" target="_blank" rel="noopener noreferrer"
                             className="px-6 py-2.5 bg-[#052F1B] text-white rounded-lg font-medium hover:bg-[#16A34A] transition-all duration-300 hover:shadow-lg hover:shadow-[#22C55E]/20"

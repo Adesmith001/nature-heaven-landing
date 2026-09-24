@@ -1,6 +1,5 @@
 // import React from "react";
 import { HelmetProvider } from "react-helmet-async";
-import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Snowfall from "react-snowfall";
 import ScrollToTopButton from "./components/ScrollToTopButton";
@@ -50,7 +49,6 @@ function App() {
                   <HeroSection />
                   <MoneyQuestSection />
                   <AvatarsSection />
-                  <Analytics />
                 </div>
               </>
             }

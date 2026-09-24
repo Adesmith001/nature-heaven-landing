@@ -83,13 +83,13 @@ const Header = () => {
                         >
                             Home
                         </Link>
-                        <Link
+                        {/* <Link
                             to="/our-work"
                             className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2 text-center"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Our Work
-                        </Link>
+                        </Link> */}
                         <a
                             href="https://blog.nurtureehaven.com/" target="_blank" rel="noopener noreferrer"
                             className="text-[#0F3D2C] font-medium hover:text-[#22C55E] transition-colors duration-300 py-2 text-center"

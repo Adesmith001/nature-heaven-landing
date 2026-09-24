@@ -1,9 +1,9 @@
 import { Client, Databases, Query } from 'appwrite';
 
 const config = {
-  endpoint: import.meta.env.VITE_APPWRITE_ENDPOINT,
-  projectId: import.meta.env.VITE_APPWRITE_PROJECT_ID,
-  databaseId: import.meta.env.VITE_APPWRITE_DATABASE_ID,
+  endpoint: import.meta.env.VITE_APPWRITE_ENDPOINT || 'https://fra.cloud.appwrite.io/v1',
+  projectId: import.meta.env.VITE_APPWRITE_PROJECT_ID || '691a7162000351b16b2a',
+  databaseId: import.meta.env.VITE_APPWRITE_DATABASE_ID || '69bf8e370027ff1361e7',
   postsCollectionId: import.meta.env.VITE_APPWRITE_WORK_POSTS_COLLECTION_ID || 'work_posts',
   imagesCollectionId: import.meta.env.VITE_APPWRITE_WORK_POST_IMAGES_COLLECTION_ID || 'work_post_images',
 };
